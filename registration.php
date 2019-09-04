@@ -104,18 +104,16 @@
 
         </div>
         <div class="col-md-4 ">
-          <form class="login100-form validate-form" action="register.php" method="post" style="margin-top:10px;">
+          <form class="login100-form validate-form" action="register.php" method="post" style="margin-top:20px;">
 
-            <span class="login100-form-title w3-tangerine" style="color:#ff5656; font-size:20px;">
-              <a class=" w3-tangerine " style="color:#ff5656; font-size:30px;" href="registration.php">Register</a>
-            </span>
+
       <?php
 
      include 'db_connect.php';
      $sqlQuery = " SELECT count(*) as count FROM register ";
      $result = mysqli_query( $connection , $sqlQuery );
      $row =  mysqli_fetch_assoc($result);
-     if($row['count'] <= 5) {
+     if($row['count'] <= 6) {
 
      ?>
             <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
@@ -167,7 +165,7 @@
             </div>
 
             <div class="">
-              <button class="btn btn-danger" style="font-size:18px;font-family:helvetica;padding-left:15px;padding-right:15px;" type="submit">
+              <button class="btn btn-danger" style="font-size:18px;font-family:helvetica;padding-left:15px;padding-right:15px;margin-top:10px;" type="submit">
                 Register
               </button>
             </div>
@@ -178,13 +176,14 @@
 
      ?>
      <div style="margin-top:100px;">
-
+       <center>
+         <img src="images/sad.svg" alt="" height="auto" width="100px;" >
+          <h3>
+            <strong>Registrations are full!</strong>
+           </h3>
+         </center>
      </div>
-          <center>
-             <h3>
-               <strong>Registrations are full!</strong>
-              </h3>
-            </center>
+
             <?php
 
      }
@@ -194,7 +193,7 @@
       </div>
     </div>
 
-    <iframe src="footer.html" frameborder="0" scrolling="no" style="width: 100%; height: 120px; margin-bottom:-20px;margin-top:20px;" id="foo"></iframe>
+
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
