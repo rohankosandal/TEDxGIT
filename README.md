@@ -1,2 +1,4 @@
 TEDxKLSGIT 
 TEDx event at GIT
+
+Technology Stack: PHP, JAVASCRIPT, HTML , JQUERY, SCSS.
