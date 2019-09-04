@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"]!="GET") {
  <html lang="en">
 
  <head>
-   <title>TEDxKLSGIT | Register</title>
+   <title>TEDxKLSGIT | Error</title>
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
    <meta property="og:title" content="TEDxKLSGIT | Speakers">
@@ -108,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"]!="GET") {
       <div class="col-md-4">
         <img src="images/log.png" alt="" height="auto" width="100%">
 
-        <p><h3 style="color:#bf0c00"><?php echo $_GET['error']; ?></h3></p>
+        <p><h3 style="color:#bf0c00"><strong><?php echo $_GET['error']; ?></strong></h3></p>
         <a style="color:black" href="<?php echo $_GET['link']; ?>"><strong>Go Back</strong></a>
       </div>
     </div>
