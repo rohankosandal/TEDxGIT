@@ -30,6 +30,17 @@
 
   <link rel="stylesheet" href="./dist/style.css">
   <link rel="stylesheet" href="./dist/style.css">
+  <style media="screen">
+  body,html{
+    font-family:helvetica;
+  }
+  iframe{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+  </style>
 </head>
 
 <body style="background: #F1EEEE;">
@@ -89,12 +100,14 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4 "></div>
-        <div class="col-md-4 ">
-          <form class="login100-form validate-form" action="register.php" method="post">
+        <div class="col-md-4">
 
-            <span class="login100-form-title w3-tangerine" style="color:#ff5656; font-size:40px;">
-              <a class=" w3-tangerine " style="color:#ff5656; font-size:40px;" href="index.html">Register</a>
+        </div>
+        <div class="col-md-4 ">
+          <form class="login100-form validate-form" action="register.php" method="post" style="margin-top:10px;">
+
+            <span class="login100-form-title w3-tangerine" style="color:#ff5656; font-size:20px;">
+              <a class=" w3-tangerine " style="color:#ff5656; font-size:30px;" href="registration.php">Register</a>
             </span>
       <?php
 
@@ -102,7 +115,7 @@
      $sqlQuery = " SELECT count(*) as count FROM register ";
      $result = mysqli_query( $connection , $sqlQuery );
      $row =  mysqli_fetch_assoc($result);
-     if($row['count'] <= 6) {
+     if($row['count'] <= 5) {
 
      ?>
             <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
@@ -153,9 +166,9 @@
               </span>
             </div>
 
-            <div class="container-login100-form-btn">
-              <button class="login100-form-btn">
-                <strong>Register</strong>
+            <div class="">
+              <button class="btn btn-danger" style="font-size:18px;font-family:helvetica;padding-left:15px;padding-right:15px;" type="submit">
+                Register
               </button>
             </div>
             <?php
@@ -164,7 +177,14 @@
      else{
 
      ?>
-            <h3> <strong>Registrations are full</strong> </h3>
+     <div style="margin-top:100px;">
+
+     </div>
+          <center>
+             <h3>
+               <strong>Registrations are full!</strong>
+              </h3>
+            </center>
             <?php
 
      }
@@ -174,7 +194,7 @@
       </div>
     </div>
 
-    <iframe src="footer.html" frameborder="0" scrolling="no" style="width: 100%; height: 120px; margin-bottom:-20px;" id="foo"></iframe>
+    <iframe src="footer.html" frameborder="0" scrolling="no" style="width: 100%; height: 120px; margin-bottom:-20px;margin-top:20px;" id="foo"></iframe>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>

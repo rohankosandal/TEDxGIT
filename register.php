@@ -23,7 +23,7 @@
 
   if ($count > 0) {
   	$error = "You have already registered!";
-    header("Location:error.php?error=".$error."&link=registration.html");
+    header("Location:error.php?error=".$error."&link=registration.php");
   }else
 {
   $query = "INSERT INTO register(receipt,name,usn,email,sem,phone)
