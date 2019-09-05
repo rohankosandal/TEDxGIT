@@ -4,11 +4,7 @@ body {
   color: #4d4d4d;
   font-weight: 400;
   font-size: 0.9rem;
-  font-family: "Roboto Mono", SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 
@@ -21,7 +17,18 @@ body {
   background: #000;
   color: #fff;
 }
-
+#imgbg{
+  background-image: url("../images/banlan.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 540px) {
+  #imgbg{
+    background-image: url("../images/banpor.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 a {
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
@@ -495,13 +502,14 @@ a:hover {
 }
 
 .site-mobile-menu {
-  width: 300px;
+  width: 100%;
   position: fixed;
   right: 0;
   z-index: 2000;
   padding-top: 20px;
   background: #fff;
   height: calc(100vh);
+  text-align: center;
   -webkit-transform: translateX(110%);
   -ms-transform: translateX(110%);
   transform: translateX(110%);
@@ -1576,7 +1584,7 @@ a:hover {
 .block-feature .heading,
 .heading-with-border h2,
 .heading-with-border .heading {
-  text-transform: uppercase;
+
   font-size: 1.1rem;
   position: relative;
   padding-bottom: 10px;
@@ -1849,6 +1857,7 @@ a:hover {
 
 .lead {
   font-size: 16px;
+  text-align:justify;
 }
 
 .hv {
