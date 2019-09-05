@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700";
+
 .fa-spin-fast {
   -webkit-animation: fa-spin-fast 0.2s infinite linear;
   animation: fa-spin-fast 0.2s infinite linear;
@@ -1242,7 +1242,7 @@
 body {
   background-color: #ECEFF1;
   color: #37474F;
-  font-family: 'Raleway', sans-serif;
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
 }
