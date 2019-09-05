@@ -113,7 +113,7 @@
      $sqlQuery = " SELECT count(*) as count FROM register ";
      $result = mysqli_query( $connection , $sqlQuery );
      $row =  mysqli_fetch_assoc($result);
-     if($row['count'] <= 6) {
+     if($row['count'] <= 5) {
 
      ?>
             <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
