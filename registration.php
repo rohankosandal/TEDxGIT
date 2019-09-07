@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147255876-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-147255876-1');
+</script>
   <title>TEDxKLSGIT | Register</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -31,7 +40,7 @@
   <link rel="stylesheet" href="./dist/style.css">
   <link rel="stylesheet" href="./dist/style.css">
   <style media="screen">
-  body,html{
+    body,html{
     font-family:helvetica;
   }
   iframe{
@@ -62,7 +71,7 @@
             <div class="row align-items-center">
               <div class="col-2">
                 <h2 class="mb-0 site-logo">
-                  <a href="index.html"><img src="images/logo.png" /></a>
+                  <a href="index.html"><img src="images/logo.png" height='45px' width='200px' /></a>
                 </h2>
               </div>
               <div class="col-10">
@@ -80,7 +89,7 @@
                         <a href="videos.html" class='text-black'>Watch</a>
                       </li>
                       <!--<li><a href="team.html" class='text-black'>Crew</a></li>-->
-                      <li ><a href="speaker.html" class='text-black'>Speakers</a></li>
+                      <li><a href="speaker.html" class='text-black'>Speakers</a></li>
 
                       <li style=""><a href="registration.php"><span style="color: red; height: 50px; font-weight: 800;padding: 0px">Register</span></a></li>
 
@@ -97,8 +106,19 @@
     <br />
     <br />
 
-
     <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4 ">
+          <div style="margin-top:100px;">
+            <center>
+              <h3>Registrations will be open soon! </h3>
+            </center>
+          </div>
+        </div>
+        <!-- <div class="container">
       <div class="row">
         <div class="col-md-4">
 
@@ -113,7 +133,7 @@
      $sqlQuery = " SELECT count(*) as count FROM register ";
      $result = mysqli_query( $connection , $sqlQuery );
      $row =  mysqli_fetch_assoc($result);
-     if($row['count'] <= 5) {
+     if($row['count'] <= 100) {
 
      ?>
             <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
@@ -123,14 +143,6 @@
                 <i class="fa fa-user" aria-hidden="true"></i>
               </span>
             </div>
-
-            <!--  <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-       <input class="input100" type="text" name="lname" placeholder="Last Name" required>
-       <span class="focus-input100"></span>
-       <span class="symbol-input100">
-         <i class="fa fa-user" aria-hidden="true"></i>
-       </span>
-     </div> -->
 
             <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
               <input class="input100" type="text" pattern="2[A-Za-z]{2}[0-9]{2}[A-Za-z]{2}[0-9]{3}" title="Please provide a valid USN" name="usn" onkeyup="this.value=this.value.toUpperCase()" placeholder="USN" required>
@@ -191,37 +203,37 @@
           </form>
         </div>
       </div>
-    </div>
+    </div> -->
 
 
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/countdown.js" type="text/javascript"></script>
-    <script src="js/main.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136909677-1"></script>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="./dist/script.js"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/bootstrap-datepicker.min.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/countdown.js" type="text/javascript"></script>
+        <script src="js/main.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136909677-1"></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="./dist/script.js"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
 
-      gtag("config", "UA-136909677-1");
-    </script>
+          gtag("config", "UA-136909677-1");
+        </script>
 </body>
 
 </html>
