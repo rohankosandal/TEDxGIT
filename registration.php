@@ -106,25 +106,13 @@
     <br />
     <br />
 
-    <div class="container">
+
+         <div class="container">
       <div class="row">
         <div class="col-md-4">
 
         </div>
         <div class="col-md-4 ">
-          <div style="margin-top:100px;">
-            <center>
-              <h3>Registrations will be open soon! </h3>
-            </center>
-          </div>
-        </div>
-        <!-- <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-
-        </div>
-        <div class="col-md-4 ">
-          <form class="login100-form validate-form" action="register.php" method="post" style="margin-top:20px;">
 
 
       <?php
@@ -133,9 +121,18 @@
      $sqlQuery = " SELECT count(*) as count FROM register ";
      $result = mysqli_query( $connection , $sqlQuery );
      $row =  mysqli_fetch_assoc($result);
-     if($row['count'] <= 100) {
+     ini_set('date.timezone', 'Asia/Kolkata');
+     $time =  getdate(strtotime("05:00pm September 12 2019"));
+
+     if ( $time['hours'] >= "17" && $time['mon'] >= "9" ) {
+
+          if ( $row['count'] <= 100 ) {
 
      ?>
+
+
+     <form class="login100-form validate-form" action="register.php" method="post" style="margin-top:20px;">
+
             <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
               <input class="input100" type="text" name="name" placeholder="Full Name" required>
               <span class="focus-input100"></span>
@@ -181,6 +178,8 @@
                 Register
               </button>
             </div>
+          </form>
+
             <?php
 
      }
@@ -196,14 +195,25 @@
          </center>
      </div>
 
-            <?php
+    <?php
 
      }
+   }
+   else {
+
      ?>
-          </form>
+     <div style="margin-top:100px;">
+       <center>
+         <h3><strong>Registrations will be open soon! </strong></h3>
+       </center>
+     </div>
+
+     <?php
+   }
+      ?>
         </div>
       </div>
-    </div> -->
+    </div>
 
 
 

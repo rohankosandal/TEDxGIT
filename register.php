@@ -17,7 +17,7 @@
   $email=Validate($_POST['email']);
   $receipt = "TED".mt_rand(111111,999999);
 
-  $sql=  "SELECT * from register WHERE usn='$usn' OR email = '$email' ";
+  $sql=  "SELECT * from register WHERE usn='$usn' OR email = '$email' OR mobile='$mobile' ";
   $result = mysqli_query($connection,$sql);
   $count = mysqli_num_rows($result);
 
