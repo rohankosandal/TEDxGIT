@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"]!="GET") {
              <div class="row align-items-center">
                <div class="col-2">
                  <h2 class="mb-0 site-logo">
-                   <a href="index.html"><img src="images/logo.png" /></a>
+                   <a href="index.html"><img src="images/logo.png" height='45px' width='200px'/></a>
                  </h2>
                </div>
                <div class="col-10">
@@ -115,10 +115,22 @@ if ($_SERVER["REQUEST_METHOD"]!="GET") {
 
       </div>
       <div class="col-md-4">
-        <img src="images/log.png" alt="" height="auto" width="100%">
 
-        <p><h3 style="color:#bf0c00"><strong><?php echo $_GET['error']; ?></strong></h3></p>
-        <a style="color:black" href="<?php echo $_GET['link']; ?>"><strong>Go Back</strong></a>
+        <div style="font-family:helvetica;font-size:30px;font-weight:bold;color:red;text-align:center;margin-top:100px;">
+          Oops...
+        </div>
+        <p>
+          <h3 style="color:red;text-align:center;">
+            <strong>
+              <?php echo $_GET['error']; ?>
+            </strong>
+          </h3>
+        </p>
+        <div style="margin-top:20px;">
+          <a style="color:black;" href="<?php echo $_GET['link']; ?>">
+            <strong> &#128072; Go Back</strong>
+          </a>
+        </div>
       </div>
     </div>
 

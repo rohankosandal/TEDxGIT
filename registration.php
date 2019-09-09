@@ -3,9 +3,9 @@
 
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147255876-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147255876-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
@@ -107,7 +107,7 @@
     <br />
 
 
-         <div class="container">
+    <div class="container">
       <div class="row">
         <div class="col-md-4">
 
@@ -115,7 +115,7 @@
         <div class="col-md-4 ">
 
 
-      <?php
+          <?php
 
      include 'db_connect.php';
      $sqlQuery = " SELECT count(*) as count FROM register ";
@@ -131,7 +131,7 @@
      ?>
 
 
-     <form class="login100-form validate-form" action="register.php" method="post" style="margin-top:20px;">
+          <form class="login100-form validate-form" action="register.php" method="post" style="margin-top:20px;">
 
             <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
               <input class="input100" type="text" name="name" placeholder="Full Name" required>
@@ -157,7 +157,7 @@
               </span>
             </div>
             <div class="wrap-input100 validate-input">
-              <input class="input100" type="number" name="sem" placeholder="Semester (Eg:6)" required>
+              <input class="input100" type="number" min="1" max="7" name="sem" placeholder="Semester (Eg:6)" required title="Please enter your Semester between 1 to 7">
               <span class="focus-input100"></span>
               <span class="symbol-input100">
                 <i class="fa fa-book" aria-hidden="true"></i>
@@ -174,41 +174,51 @@
             </div>
 
             <div class="">
-              <button class="btn btn-danger" style="font-size:18px;font-family:helvetica;padding-left:15px;padding-right:15px;margin-top:10px;" type="submit">
+
+              <label for="TC" style="font-size:14px;">
+                <input type="checkbox" id="TC" required>
+                <strong>
+                  Attendence is compulsory once the ticket is booked.
+                </strong>
+              </label>
+            </div>
+
+            <div class="">
+              <button class="btn btn-danger" id="register" style="font-size:18px;font-family:helvetica;padding-left:15px;padding-right:15px;margin:10px;" type="submit">
                 Register
               </button>
             </div>
           </form>
 
-            <?php
+          <?php
 
      }
      else{
 
      ?>
-     <div style="margin-top:100px;">
-       <center>
-         <img src="images/sad.svg" alt="" height="auto" width="100px;" >
-          <h3>
-            <strong>Registrations are full!</strong>
-           </h3>
-         </center>
-     </div>
+          <div style="margin-top:100px;">
+            <center>
+              <img src="images/sad.svg" alt="" height="auto" width="100px;">
+              <h3>
+                <strong>Registrations are full!</strong>
+              </h3>
+            </center>
+          </div>
 
-    <?php
+          <?php
 
      }
    }
    else {
 
      ?>
-     <div style="margin-top:100px;">
-       <center>
-         <h3><strong>Registrations will be open soon! </strong></h3>
-       </center>
-     </div>
+          <div style="margin-top:100px;">
+            <center>
+              <h3><strong>Registrations will be open soon! </strong></h3>
+            </center>
+          </div>
 
-     <?php
+          <?php
    }
       ?>
         </div>
@@ -217,33 +227,38 @@
 
 
 
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/jquery-migrate-3.0.1.min.js"></script>
-        <script src="js/jquery-ui.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/jquery.stellar.min.js"></script>
-        <script src="js/jquery.countdown.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/bootstrap-datepicker.min.js"></script>
-        <script src="js/aos.js"></script>
-        <script src="js/countdown.js" type="text/javascript"></script>
-        <script src="js/main.js"></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136909677-1"></script>
-        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src="./dist/script.js"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/countdown.js" type="text/javascript"></script>
+    <script src="js/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136909677-1"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="./dist/script.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag("js", new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-          gtag("config", "UA-136909677-1");
-        </script>
+      gtag("config", "UA-136909677-1");
+    </script>
 </body>
 
 </html>
+<script type="text/javascript">
+  $('#register').on('click', function() {
+    if ()
+  });
+</script>

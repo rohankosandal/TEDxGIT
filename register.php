@@ -17,12 +17,12 @@
   $email=Validate($_POST['email']);
   $receipt = "TED".mt_rand(111111,999999);
 
-  $sql=  "SELECT * from register WHERE usn='$usn' OR email = '$email' OR mobile='$mobile' ";
+  $sql=  "SELECT * from register WHERE usn='$usn' OR ( email = '$email' OR phone = '$mobile' )  ";
   $result = mysqli_query($connection,$sql);
   $count = mysqli_num_rows($result);
 
   if ($count > 0) {
-  	$error = "You have already registered!";
+  	$error = "Seems like you have already registered!";
     header("Location:error.php?error=".$error."&link=registration.php");
   }else
 {
@@ -38,9 +38,17 @@ mysqli_query($connection,$query);
   <title>Transaction Receipt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta property="og:title" content="TEDxKLSGIT | Speakers">
+  <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
 
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" />
+  <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css" />
+  <link rel="icon" type="image/png" href="images/icon.png" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500" />
   <style>
-  body{
+    body{
     background-image:url("electricity.jpg");
 background-position: center center;
 			background-repeat:  no-repeat;
@@ -161,8 +169,10 @@ background-position: center center;
                 </td>
 
                 <td>
-                  Receipt no.: <?php print $receipt;  ?><br>
-                  Date : <?php print date("d/m h:i:s A"); ?>
+                  Receipt no.:
+                  <?php print $receipt;  ?><br>
+                  Date :
+                  <?php print date("d/m h:i:s A"); ?>
                 </td>
               </tr>
             </table>
@@ -193,7 +203,8 @@ background-position: center center;
         </tr>
         <tr class="item">
           <td>
-            Name : <?php print $name;  ?>
+            Name :
+            <?php print $name;  ?>
           </td>
 
 
@@ -201,28 +212,32 @@ background-position: center center;
 
         <tr class="item">
           <td>
-            USN : <?php print $usn; ?>
+            USN :
+            <?php print $usn; ?>
           </td>
 
 
         </tr>
         <tr class="item">
           <td>
-            Semester : <?php print $sem; ?>
+            Semester :
+            <?php print $sem; ?>
           </td>
 
 
         </tr>
         <tr class="item">
           <td>
-            Email address: <?php print $email; ?>
+            Email address:
+            <?php print $email; ?>
           </td>
 
 
         </tr>
         <tr class="item">
           <td>
-            Contact No. : <?php print $mobile; ?>
+            Contact No. :
+            <?php print $mobile; ?>
           </td>
 
 
@@ -230,9 +245,9 @@ background-position: center center;
       </table>
     </div>
   </form>
-
-  <input type="button" class="btn btn-secondary" id="create_pdf" value="Download Receipt">
-  <a href="event.html" class="btn btn-light">Go to Events</a>
+  <div style="margin">
+    <input type="button" class="btn btn-secondary" id="create_pdf" value="Download Receipt">
+  </div>
 </body>
 
 </html>
