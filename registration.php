@@ -123,8 +123,8 @@
      $row =  mysqli_fetch_assoc($result);
      ini_set('date.timezone', 'Asia/Kolkata');
      $time =  getdate(strtotime("05:00pm September 12 2019"));
-
-     if ( $time['hours'] >= "17" && $time['mon'] >= "9" ) {
+     $currentTime = getdate(time());
+     if (  $currentTime['0'] >= $time['0'] ) {
 
           if ( $row['count'] <= 100 ) {
 
